@@ -1,15 +1,12 @@
+var http = require("http");
 
-
-
-const http = require ("http");
-
-function server(request, response)=>{
-	response.writeHead(200, {
-		"Content-Type": "text/html"
+function server(request, response) {
+	response.writeHead(200,{
+		"Content-type": "text/html"
 	});
-	response.write("Hola mundo!!.");
+	response.write("Hola Mundo!!.");
 	response.end();
-}.listen(8080);
+	// body...
+}
 
-
-//http.createServer(server)
+http.createServer(server).listen(8080);
